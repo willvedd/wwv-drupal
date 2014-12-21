@@ -1,0 +1,42 @@
+/********************
+** Fonts
+********************/
+
+$baseFontSize	: 16;
+$baseLineHeight	: 1.5em;
+
+$f-patua		: 'patua_one', Georgia,serif;
+$f-lato			: 'lato', Helvetica, Arial,sans-serif;
+$f-roboto 		: 'roboto', Georgia,serif;
+$f-oswald 		: 'oswald', Georgia,serif;
+$f-archivo 		: 'archivo', Georgia,serif;
+$f-montserrat 	: 'montserrat', Georgia,serif;
+$f-francois 	: 'francois', Georgia,serif;
+
+/********************
+** Colors
+********************/
+$black: #000000;
+$white: #ffffff;
+$gray:	#E9E9E9;
+$gray-dark:	#7e7e7e;
+/*Text*/
+$p:#202020;//p
+$salmon: #F17676;//h1
+$text-gray-dark:#585858;//h2
+$text-gray-light:#929292;
+/*Header*/ 
+$header_red:#DF5A5A;//currently
+/*Footer*/ 
+$footer_blue: #5B9CCF;
+$footer_blue_border: #1B6096;
+$footer_blue_a:#ffffff;
+/*Other*/
+$frame: #C0C0C0;//image border
+$trasparent: rgba(255, 0, 0, 0);
+
+/********************
+** Images
+********************/
+
+$i-filePath:            '../images/';

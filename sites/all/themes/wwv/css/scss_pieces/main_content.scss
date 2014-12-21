@@ -1,0 +1,220 @@
+.message{
+  p{
+    @include font-size(28);
+    line-height: 2rem;
+    text-align: center;
+  }
+}
+
+.content_wrapper{
+  width: 100%;
+  background-color: $white;
+  z-index: 1;
+  .inner_container{
+    padding: 0 5% 80px 5%;
+    margin: 50px auto;
+    max-width: 830px;
+    @include bp(sml) {
+      padding: 0 7% 80px 7%;
+    }
+  }
+}
+.push{
+  position: relative;
+  width: 100%;
+  margin-bottom:360px;
+  background-color: $white;
+}
+main{
+  position: relative;
+  .message{
+    margin: 0 auto;
+    width: 75%;
+    padding: 110px 0;
+    
+    @include bp(sml) {
+      width: 57%;
+      padding: 110px 0;
+    }
+  }
+  
+
+  .project{
+    width: 100%;
+    padding: 35px 5%;
+
+    @include bp(xxlrg) {
+      width: 50%!important;
+    }
+    
+    h1{
+      margin: 20px 0 20px 0; 
+      @include bp(lrg) {
+        margin: 0 0 20px 0;
+      } 
+    }
+    .feature{
+      margin: 0;
+
+      @include bp(sml) {
+        margin: 15px 0;
+      }
+      .image{
+        padding: 0 4%
+      }
+      .copy{
+        padding: 0 4%;
+      }
+      img{
+        border: 1px solid $frame;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  $perc1  : 2.5%;
+  $perc2  : 10%;
+  $colx   : $white;
+  $col1   : $colx;//#FCE3BF;
+  $col2   : $colx;//#89A5C4;
+  $col3   : $colx;//#89C4B8;
+  $col4   : $colx;//#BBC489;
+
+  .project:nth-of-type(1){
+    background: darken($col1,$perc1);
+    border-top: 1px solid darken(darken($col1,$perc1),$perc2);
+    border-bottom: 1px solid darken(darken($col1,$perc1),$perc2);
+  }
+  .project:nth-of-type(2){
+    background: darken(darken($col2,$perc1),$perc1);
+    border-bottom: 1px solid darken(darken(darken($col2,$perc1),$perc1),$perc2);
+  }
+  .project:nth-of-type(3){
+    background: darken(darken(darken($col3,$perc1),$perc1),$perc1);
+    border-bottom: 1px solid darken(darken(darken(darken($col3,$perc1),$perc1),$perc1),$perc2);
+  }
+  .project:nth-of-type(4){
+    background: darken(darken(darken(darken($col4,$perc1),$perc1),$perc1),$perc1);
+  }
+
+  .details{
+    padding: 15px;
+    
+    h2,p {
+      opacity:0;  /* make things invisible upon start */
+      -webkit-animation:fadeIn ease-in-out 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      -moz-animation:fadeIn ease-in-out 1;
+      animation:fadeIn ease-in-out 1;
+   
+      -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode:forwards;
+      animation-fill-mode:forwards;
+   
+      -webkit-animation-duration:.3s;
+      -moz-animation-duration:.3s;
+      animation-duration:.3s;
+    }
+    p{
+      max-width: 600px;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+a.header{
+  color: $white;
+  -webkit-transition: font-size .2s ease-in-out!important;
+  -moz-transition: font-size .2s ease-in-out!important;
+  -ms-transition: font-size .2s ease-in-out!important;
+  -o-transition: font-size .2s ease-in-out!important;
+  transition: font-size .2s ease-in-out!important;
+
+  &:hover{
+    color: darken($salmon,10%);
+    text-decoration: none;
+    //text-transform: lowercase;
+  }
+  &:hover{
+    color: #862020;
+  }
+}
+.subpage{
+
+
+  .line{
+    width: 100%;
+    margin: 10px 0 20px 0;
+    border-bottom:2px solid $gray;
+  }
+  h1{
+    margin-bottom: 5px;
+    color: $text-gray-dark;
+    @include font-size(32);
+
+    @include bp(sml) {
+      @include font-size(40);
+    }
+  }
+  p.subtext{
+    @include font-size(20);
+    color: $text-gray-light;
+    margin: 10px 0;
+
+    @include bp(sml) {
+      @include font-size(24);
+    }
+  }
+  h2{
+    margin: 25px 0 10px 0;
+  }
+  p{
+    margin: 20px 0;
+  }
+  p.quote{
+    color: $gray-dark;
+    padding: 5px 15px;
+    font-style: italic;
+    &:before{
+      @include font-size(24);
+      font-weight: bold;
+      content: "'' ";
+    }
+    &:after{
+      @include font-size(24);
+      font-weight: bold;
+      content: " ''";
+    }
+    @include bp(sml) {
+      padding: 5px 20px;
+    }
+  }
+  p.job-info{
+    margin-top: 0;
+  }
+  ul.style{
+    li:before{
+      content: "•";
+      color: $header_red;
+      padding-right: 5px;
+      @include font-size(24);
+    }
+  }
+}
+
+.resume{
+  h3{
+    display: inline;
+  }
+  .date{
+    display: inline;
+    float: right;
+    color: $text-gray-light;
+    @include font-size(16);
+  }
+}
+
+code .line{
+  margin: auto!important;
+  border: none!important;
+}
+

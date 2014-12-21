@@ -1,0 +1,88 @@
+/********************
+** Header
+********************/
+header{
+  position: fixed;
+  margin: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: $white;
+  z-index: 0;
+
+  #name{
+    @include bp(sml) {
+      &:after{
+        content:""
+      }
+    }
+    @include bp(med) {
+      &:after{
+        content:"iamson"
+      }
+    }
+    @include bp(lrg) {
+      &:after{
+        content:"iamson"
+      }
+    }
+    @include bp(xlrg) {
+      &:after{
+        content:"iamson W."
+      }
+    }
+    @include bp(xxlrg) {
+      &:after{
+        content:"iamson W."
+      }
+    }
+  }
+
+  h1{
+    @include font-size(48);
+    font-weight: normal;
+    font-family: $f-patua;
+    margin: 25px 0 0 0 ;
+    
+    @include bp(sml) {
+      margin: 30px 0 0 0;
+    }
+    @include bp(med) {
+      margin: 25px 0 0 0;
+    }
+    @include bp(lrg) {
+      margin: 30px 0 0 0;
+    }
+    
+  }
+  
+  h2{
+    @include font-size(32);
+    margin-top: 5px;
+  }
+
+  .header_bg{
+    width: 100%;
+  }
+
+  .header_text{
+    position:absolute;
+    width: 100%;
+    
+    .sub_text{
+      font-family: $f-lato;
+      @include font-size(18);
+    }
+  }
+}
+.header_overlay{
+  width: 100%;
+  background-color: $header_red;
+  padding-top: 20px;
+  -webkit-transition: padding-top .5s ease-in-out;
+  -moz-transition: padding-top .5s ease-in-out;
+  -ms-transition: padding-top .5s ease-in-out;
+  -o-transition: padding-top .5s ease-in-out;
+  transition: padding-top .5s ease-in-out;
+}

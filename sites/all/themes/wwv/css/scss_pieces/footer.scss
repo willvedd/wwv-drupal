@@ -1,0 +1,111 @@
+/*==============================================*/
+/*=============== Footer ===================*/
+/*==============================================*/
+
+footer {
+  width:100%;
+  background-color: $footer_blue;
+  border-bottom: 5px solid $footer_blue_border;
+  position:fixed;
+  bottom:0;
+  height: 360px;
+  z-index: 0;
+  text-align: center;
+  display: table;
+
+  .footer_contain{
+    padding: 0 4%;
+    display: table-cell;
+    vertical-align: middle;
+
+    .message{
+      margin: 0 auto 80px auto;
+      @include bp(sml) {
+        margin: 0 auto 65px auto;
+      }
+      p{
+        color: $white;
+      }
+      a{
+        color: $white;
+        //text-decoration: underline;
+        border-bottom:1px solid white;
+        &:hover{
+          color: $footer_blue_border;
+          border-bottom-color: $footer_blue_border;
+        }
+      }
+    }
+    .links{
+      margin: 0 auto;
+      width: 100%;
+      overflow: visible;
+      
+      .button{
+        background: none;
+        border: 2px solid $white;
+        @include font-size(18);
+        color: $white;
+        display: inline-block;
+        padding: 5%;
+        border-radius: 4px;
+        margin: 0 1%; 
+
+        @include bp(sml) {
+          padding: 20px;
+        }
+        @include bp(med) {
+          margin: 0 2%;
+        } 
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out; 
+
+        &:hover{
+          background-color: $footer_blue_border;
+        }
+
+        &#email{
+          &:after{
+            content: "Email";
+            @include bp(med) {
+              content: "will@willvedder";
+            }
+            @include bp(lrg) {
+              content: "will@willvedder.com";
+            }
+            @include bp(xlrg) {
+              content: "will@willvedder.com";
+            }
+            @include bp(xxlrg) {
+              content: "will@willvedder.com";
+            }
+          }
+        }
+
+        &#resume{}
+
+        &#github{
+          &:after{
+            @include bp(xxlrg) {
+              content: ".com/willvedd";
+            }
+            @include bp(xlrg) {
+              content: ".com/willvedd";
+            }
+            @include bp(lrg) {
+              content: ".com/willvedd";
+            }
+            @include bp(med) {
+              content: "/willvedd";
+            }
+            @include bp(sml) {
+            }
+          }
+        }
+      }
+    }
+  } 
+}

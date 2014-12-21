@@ -1,0 +1,116 @@
+/********************
+** Base
+********************/
+
+* { 
+	margin: 0; 
+	border: 0; 
+	outline: 0; 
+	padding: 0; 
+	vertical-align: baseline; 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+html { 
+	min-height: 100%; 
+	font-size: 100%; 
+	-webkit-font-smoothing: 
+	antialiased; 
+	margin:0 auto; 
+	height: auto!important;//without this foundation fucks up the scrolling
+}
+
+body { 
+	min-height: 100%; 
+	line-height: 1; 
+	@include font-size($baseFontSize); 
+	background:none;
+	position: relative;
+	margin: 0;
+}
+
+img { 
+	display: block; 
+	//width:100%; 
+	//max-width: 100%; 
+	height: auto; 
+	-ms-interpolation-mode: bicubic; 
+	-moz-user-drag: -moz-none; 
+	-webkit-user-drag: none; 
+	user-drag: none; 
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+    &.h1, &.h2, &.h3, &.h4, &.h5, &.h6 { }
+}
+
+blockquote { }
+
+:focus { outline: 0; }
+
+/********************
+** Paragraph and list style resets
+********************/
+
+//Paragraph and list style resets
+p { line-height: $baseLineHeight; }
+p + p { margin-top: $baseLineHeight; }
+dl, ol, ul  { margin-bottom: $baseLineHeight; line-height: $baseLineHeight; }
+ul, ol { margin: 0 0 $baseLineHeight 0; padding: 0 0 0 $baseLineHeight; list-style: none;  }
+li ul, li ol { margin: 0; }
+
+/********************
+** Forms
+********************/
+
+input,
+select,
+textarea { display: block; -webkit-appearance: none; }
+
+label, .label { }
+
+*:focus { outline: none; } /*removes blue glow from input*/
+
+
+/********************
+** Text 
+********************/
+h1{
+	font-family: helvetica neue, helvetica, arial;
+	@include font-size(40);
+}
+h2{
+	color: $footer_blue_border;
+}
+h3{
+	font-family: helvetica neue, helvetica, arial;
+	@include font-size(20);
+	margin: 15px 0 0 0;
+	color: $text-gray-dark;
+}
+a{
+  text-decoration: none;
+  color: $salmon;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  &:hover{
+    color: darken($salmon,10%);
+    text-decoration: none;
+    //text-transform: lowercase;
+  }
+}
+
+p{
+  color: $p;
+  font-family: droidsans;
+}

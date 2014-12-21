@@ -1,0 +1,128 @@
+@mixin border-radius($vert, $side, $radius) {
+	border-#{$vert}-#{$side}-radius: $radius;
+}
+@mixin border-circle-radius($radius) {
+	border-radius: $radius;
+}
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 0, $color: #000, $inset:"") {
+	-webkit-box-shadow: $x $y $blur $color #{$inset};
+	-moz-box-shadow: 	$x $y $blur $color #{$inset};
+	box-shadow: 		$x $y $blur $color #{$inset};
+}
+
+@mixin bp($point) {
+
+	$break-sml	: "only screen and (min-width : 640px)";
+	$break-med	: "only screen and (min-width : 641px)";
+	$break-lrg	: "only screen and (min-width : 769px)";
+	$break-xlrg	: "only screen and (min-width : 960px)";
+	$break-xxlrg: "only screen and (min-width : 1281px)";
+
+	@if $point == sml {
+		@media #{$break-sml} { @content; }
+	}
+	@else if $point == med {
+		@media #{$break-med} { @content; }
+	}
+	@else if $point == lrg {
+		@media #{$break-lrg}  { @content; }
+	}
+	@else if $point == xlrg {
+		@media #{$break-xlrg}  { @content; }
+	}
+	@else if $point == xxlrg {
+		@media #{$break-xxlrg}  { @content; }
+	}
+}
+
+@mixin float($dir: left) {
+	display:			inline;
+	float:				$dir;
+}
+
+@mixin font-size($pixelSize: $baseFontSize) {
+    font-size: #{$pixelSize}px;
+    font-size: #{$pixelSize / $baseFontSize}rem;
+}
+
+@mixin inline-block() {
+	display:			inline-block;
+	*display:			inline;
+	*zoom:				1;
+}
+
+@mixin linear-grad($color1,$color2,$pos1:0%,$pos2:100%){
+	background: -moz-linear-gradient(top, $color1 $pos1, $color2 $pos2); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop($pos1,$color2), color-stop($pos2,$color2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $color1 $pos1,$color2 $pos2); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $color1 $pos1,$color2 $pos2); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $color1 $pos1,$color2 $pos2); /* IE10+ */
+	background: linear-gradient(to bottom, $color1 $pos1,$color2 $pos2); /* W3C */
+}
+
+
+@mixin linear-gradient-bg-image($url, $repeat, $x, $y, $colStart, $colEnd) {
+	background: url($url) $repeat $x $y;
+	background: url($url) $repeat $x $y, -webkit-gradient(linear, left top, left bottom, from($colStart), to($colEnd)) 0 0;
+	background: url($url) $repeat $x $y, -moz-linear-gradient(top, $colStart, $colEnd);
+	background: url($url) $repeat $x $y, -ms-linear-gradient(top, $colStart, $colEnd);
+	background: url($url) $repeat $x $y, -o-linear-gradient(top, $colStart, $colEnd);
+}
+
+@mixin opacity($value) {
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100}); // ie8
+	filter: alpha(opacity=#{$value * 100}); // ie 6-7
+	opacity: $value; // good browsers
+}
+
+@mixin reset-margins{
+	margin: 0;
+	*{
+		margin: 0;
+	}
+}
+
+@mixin reset-padding{
+	padding: 0;
+	*{
+		padding: 0;
+	}
+}
+
+@mixin reset-margin-padding{
+	margin:0;
+	padding:0;
+}
+
+@mixin tap-highlight-color($color) {
+	-webkit-tap-highlight-color:	$color;
+	-moz-tap-highlight-color:		$color;
+	-o-tap-highlight-color:			$color;
+}
+
+@mixin transform($transform) {
+	-webkit-transform:	$transform;
+	-moz-transform:		$transform;
+	-ms-transform:		$transform;
+	-o-transform: 		$transform;
+	transform:			$transform;
+}
+ 
+@mixin transition($property, $duration, $function: linear) {	
+	-webkit-transition: $property $duration $function;
+	-moz-transition: 	$property $duration $function;
+	-ms-transition: 	$property $duration $function;
+	-o-transition: 		$property $duration $function;
+	transition: 		$property $duration $function;
+}
+
+@mixin width($elementWidth, $containerWidth) {
+	width: $elementWidth / $containerWidth * 100%;
+}
+
+@mixin wordBreak(){
+	-ms-word-wrap: break-all;
+	    word-wrap: break-all;
+	    word-wrap: break-word;
+}
