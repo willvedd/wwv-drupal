@@ -11,6 +11,13 @@ function nid_url($nid){
   return url('node/'.$nid);
 }
 
+function bean_render($delta){
+  $bean = block_load('bean', $delta);
+  $bean1 = _block_render_blocks(array($bean));
+  $bean2 = _block_get_renderable_array($bean1);
+  return drupal_render($bean2);
+}
+
 //-------------------
 // Helper Variables
 //-------------------

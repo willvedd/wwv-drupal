@@ -120,24 +120,6 @@ main{
     }
   }
 }
-
-a.header{
-  color: $white;
-  -webkit-transition: font-size .2s ease-in-out!important;
-  -moz-transition: font-size .2s ease-in-out!important;
-  -ms-transition: font-size .2s ease-in-out!important;
-  -o-transition: font-size .2s ease-in-out!important;
-  transition: font-size .2s ease-in-out!important;
-
-  &:hover{
-    color: darken($salmon,10%);
-    text-decoration: none;
-    //text-transform: lowercase;
-  }
-  &:hover{
-    color: #862020;
-  }
-}
 .subpage{
 
 

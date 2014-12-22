@@ -4,7 +4,7 @@
     <?php print $messages; ?>
     <section class="message flex-contain-wrap">
       <div class="flex-item-1">
-        <p>Philly native excited to make cool web things. Specializing in Drupal, but lover of all things technical.</p>
+        <?php echo bean_render('homepage');?>
       </div>
     </section>
     <section class="content">

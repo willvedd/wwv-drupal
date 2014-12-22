@@ -1,6 +1,6 @@
 <footer>
   <div class="footer_contain">
-    <div class="message"><p>I’m a web developer in Philly.</p></div>
+    <div class="message"><?php echo bean_render('footer-normal');?></div>
     <div class="links">
       <!-- <a target="_blank" id="email" href="mailto:will@willvedder.com">Email</a>
       <a target="_blank" id="resume" href="files/Will_Vedder_Resume.pdf">Resume</a>
