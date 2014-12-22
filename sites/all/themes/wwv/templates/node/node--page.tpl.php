@@ -1,6 +1,5 @@
 <?php 
   $node_wrapper = entity_metadata_wrapper('node', $node);
-  //$subhead = $node_wrapper->field_subhead->value();
 ?>
 
   <main class="content_wrapper subpage node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>

@@ -1,7 +1,7 @@
 <?php 
   $node_wrapper = entity_metadata_wrapper('node', $node);
   $image = $node_wrapper->field_image->value();
-  $image_url = image_style_url($image['uri'],'project');
+  $image_url = image_style_url('project',$image['uri']);
   $link = $node_wrapper->field_project_link->value();
 ?>
 <article id="jawn" class="project node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
