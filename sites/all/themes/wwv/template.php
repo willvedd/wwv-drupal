@@ -1,4 +1,6 @@
 <?php
+
+
 function wwv_preprocess_node(&$vars, $hook) {
   $vars['theme_hook_suggestions'][] = 'node__'.$vars['node']->type;
   $vars['theme_hook_suggestions'][] = 'node__'.$vars['node']->type.'__'.$vars['view_mode'];
