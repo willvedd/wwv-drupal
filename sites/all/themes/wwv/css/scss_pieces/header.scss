@@ -41,7 +41,23 @@ header{
 
 
   a.header{
-   color: $white;
+    color: $white;
+    display: none;
+    display: inline-table;
+    
+    .underline{
+      background-color: $white;
+      height: 2px;
+      display: block;
+      margin: 0 auto;
+      width: 0;
+      @include transition(all,.25s,ease-out);
+    }
+    &:hover{
+      .underline{
+        width: 100%;
+      }
+    }
   }
 
   h1{

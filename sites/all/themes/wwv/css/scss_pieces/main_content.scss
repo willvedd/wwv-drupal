@@ -200,3 +200,35 @@ code .line{
   border: none!important;
 }
 
+/********************
+** Code snippets 
+********************/
+.messages{
+  width: 90%;
+  margin: 30px auto 20px auto;
+  background-color: $gray;
+  padding: 15px;
+  border: 2px solid darken($gray,20%);
+  max-width: 730px;
+}
+
+.messages--status{
+  background-color: #FFF9E5;
+  border-color: darken(#FFF9E5,25%);
+}
+
+.messages--warning{
+  background-color: #FFD7D7;
+  border-color: darken(#FFD7D7,20%);
+}
+
+
+
+
+
+
+
+
+
+
+
