@@ -71,16 +71,16 @@ footer {
           &:after{
             content: "Email";
             @include bp(med) {
-              content: "will@willvedder";
+              content: "willvedd@gmail";
             }
             @include bp(lrg) {
-              content: "will@willvedder.com";
+              content: "willvedd@gmail.com";
             }
             @include bp(xlrg) {
-              content: "will@willvedder.com";
+              content: "willvedd@gmail.com";
             }
             @include bp(xxlrg) {
-              content: "will@willvedder.com";
+              content: "willvedd@gmail.com";
             }
           }
         }
