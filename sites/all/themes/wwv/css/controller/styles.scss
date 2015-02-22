@@ -1,20 +1,21 @@
 //Set-up variables and mixins
 @import "../scss_pieces/variables";
 @import "../scss_pieces/mixins";
-
+     
 //CSS normalize
 @import "../scss_pieces/normalize";
 
 //Partials
 @import "../scss_pieces/base";
-@import '../scss_pieces/grid';
+@import '../scss_pieces/grid';  
 @import '../scss_pieces/header';
 @import '../scss_pieces/footer';
 @import '../scss_pieces/fonts';
 @import	'../scss_pieces/main_content';
+@import	'../scss_pieces/blog';
 @import	'../scss_pieces/fancy';
 
-//Clean up for print
+//Clean up for print 
 /*@media only print { 
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
   .header, .footer, .sidebar, img, form { display: none !important; }

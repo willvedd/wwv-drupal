@@ -51,6 +51,7 @@ stylesheets[all][] = system.theme.css
 
 ; Then we add our own stylesheet.
 stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/highlight.css
 stylesheets[all][] = css/foundation.min.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
@@ -67,7 +68,8 @@ stylesheets[all][] = css/foundation.min.css
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
+scripts[] = js/script.js
+scripts[] = js/highlight.js
 
 
 

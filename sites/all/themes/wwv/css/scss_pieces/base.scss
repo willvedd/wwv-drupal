@@ -73,6 +73,32 @@ input,
 select,
 textarea { display: block; -webkit-appearance: none; }
 
+input[type='text'],input[type='password']{
+	border: 1px solid darken($gray,20%);
+	padding: 10px 15px;
+	margin: 10px 0px;
+	font-size: 20px;
+	width: 100%;
+	background-color: $gray;
+}
+
+input[type='submit']{
+	border: 1px solid darken($footer_blue,20%);
+	padding: 15px;
+	margin: 10px 0px;
+	font-size: 20px;
+	width: 100%;
+	color: $white;
+	font-weight: bold;
+	background-color: $footer_blue;
+	@include transition(background-color,.25s);
+
+	&:hover{
+		background-color: darken($footer_blue,10%);
+	}
+}
+
+
 label, .label { }
 
 *:focus { outline: none; } /*removes blue glow from input*/
@@ -114,3 +140,16 @@ p{
   color: $p;
   font-family: droidsans;
 }
+
+/********************
+** Code snippets 
+********************/
+
+code{
+	@include font-size(14);
+	border-radius: 2px;
+	padding: 15px!important;
+	margin: 15px 0!important;
+	font-weight: bold;
+}
+

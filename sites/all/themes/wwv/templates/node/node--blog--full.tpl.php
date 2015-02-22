@@ -6,14 +6,14 @@
   $date_formatted = date('M j Y',$date);
 ?>
 
-<article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article class="blog node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
   <?php print render($title_suffix); ?>
+  <span class="date"><time><?php echo $date_formatted;?></time></span>
   <h1><?php echo $title;?></h1>
   <?php if($subhead):?>
   <p class="subtext"><?php echo $subhead;?></p>
   <?php endif;?>
   <div class="line"></div>
   <?php print render($content['body']); ?>
-  <p>Published: <?php echo $date_formatted;?></p>
 </article>

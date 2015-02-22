@@ -1,0 +1,28 @@
+.blog{
+  .date{
+    color: $gray-dark;
+    @include font-size(15);
+    text-transform: uppercase;
+    margin: 0;
+    display: block;
+  }
+
+  h1{
+    margin: 10px 0;
+  }
+}
+
+.blog-teaser{
+
+  margin: 20px 0;
+  border-bottom:2px solid $gray;
+
+  h1{
+    @include font-size(32);
+    color: inherit!important;
+  }
+
+  p{
+    margin: 15px 0;
+  }
+}
